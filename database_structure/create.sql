@@ -42,7 +42,7 @@ CREATE TABLE klub(
     ID_klub NUMERIC PRIMARY KEY,
     nazwa varchar2(64) NOT NULL UNIQUE,
     budzet NUMERIC,
-    wartosc NUMERIC CHECK wartosc>0,
+    wartosc NUMERIC CHECK (wartosc>0),
     Wlasciciel NUMERIC REFERENCES osoba(ID_osoba) NOT NULL,
     liga NUMERIC REFERENCES liga(ID_liga) NOT NULL,
     stadion NUMERIC REFERENCES stadion(ID_stadion) NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE pozycja(
 CREATE TABLE pilkarz(
     ID_pilkarz NUMERIC PRIMARY KEY,
     ID_pozycja NUMERIC REFERENCES pozycja(ID_pozycja) NOT NULL,
-    wartosc NUMERIC CHECK wartosc >0,
+    wartosc NUMERIC CHECK (wartosc >0),
     ID_klub NUMERIC REFERENCES klub(ID_klub) NOT NULL,
     ID_osoba NUMERIC REFERENCES osoba(ID_osoba) NOT NULL UNIQUE
 );
@@ -151,5 +151,5 @@ CREATE TABLE przebiegMeczu(
     ID_przebiegMeczu NUMERIC PRIMARY KEY,
     ID_zdarzenie numeric references zdarzenie(ID_zdarzenie),
     ID_pilkarza numeric references pilkarz(ID_pilkarz),
-    minuta numeric check minuta>0 and minuta <130
+    minuta numeric check (minuta>0 and minuta <130)
 );
