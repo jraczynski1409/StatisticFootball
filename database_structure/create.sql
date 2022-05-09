@@ -149,6 +149,7 @@ CREATE TABLE zdarzenie(
 );
 CREATE TABLE przebiegMeczu(
     ID_przebiegMeczu NUMERIC PRIMARY KEY,
+    ID_mecz NUMERIC REFERENCES mecz(ID_mecz),
     ID_zdarzenie numeric references zdarzenie(ID_zdarzenie),
     ID_pilkarza numeric references pilkarz(ID_pilkarz),
     minuta numeric check (minuta>0 and minuta <130)
