@@ -43,7 +43,7 @@ CREATE TABLE klub(
     nazwa varchar2(64) NOT NULL UNIQUE,
     budzet NUMERIC,
     wartosc NUMERIC CHECK (wartosc>0),
-    Wlasciciel NUMERIC REFERENCES osoba(ID_osoba) NOT NULL,
+    Wlasciciel VARCHAR2(64) NOT NULL,
     liga NUMERIC REFERENCES liga(ID_liga) NOT NULL,
     stadion NUMERIC REFERENCES stadion(ID_stadion) NOT NULL,
     miasto NUMERIC REFERENCES miasto(ID_miasto) NOT NULL,
@@ -137,6 +137,9 @@ CREATE TABLE mecz(
     ID_mecz NUMERIC PRIMARY KEY,
     ID_gospodarz numeric references klub(ID_klub) NOT NULL,
     ID_gosc numeric references klub(ID_klub) NOT NULL,
+	gospGol numeric;
+	goscGol numeric;
+	rezultat numeric;
     ID_sedzia numeric references sedzia(ID_sedzia) NOT NULL,
     ID_sezon numeric references sezon(ID_sezon) NOT NULL,
     termin date NOT NULL
