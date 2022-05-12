@@ -105,7 +105,7 @@ CREATE TABLE statystykiPilkarza(
     matches numeric,
     yellow numeric,
     red numeric,
-    ID_pilarz NUMERIC REFERENCES pilkarz(ID_pilkarz) NOT NULL,
+    ID_pilkarz NUMERIC REFERENCES pilkarz(ID_pilkarz) NOT NULL,
     ID_sezon NUMERIC REFERENCES sezon(ID_sezon) NOT NULL
 );
 
