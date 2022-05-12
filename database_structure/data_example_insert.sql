@@ -2,7 +2,7 @@ INSERT INTO narodowosc VALUES(1,'Anglia');
 INSERT INTO narodowosc VALUES(2,'Brazylia');
 INSERT INTO narodowosc VALUES(3,'Portugalia');
 INSERT INTO narodowosc VALUES(4,'Wlochy');
-INSERT INTO narodowosc VALUES(5,'Hiszpania')
+INSERT INTO narodowosc VALUES(5,'Hiszpania');
 
 INSERT INTO miasto VALUES(1, 'Manchester');
 INSERT INTO miasto VALUES(2, 'Liverpool');
@@ -39,8 +39,8 @@ INSERT INTO trofeum VALUES(2,'Carabao Cup', 1);
 INSERT INTO trofeum VALUES(3,'FA cup', 1);
 
 INSERT INTO zdobyteTrofeum VALUES(1,1,1);
-INSERT INTO zdobyteTrofeum VALUES(1,1,1);
-INSERT INTO zdobyteTrofeum VALUES(1,1,1);
+INSERT INTO zdobyteTrofeum VALUES(2,2,2);
+INSERT INTO zdobyteTrofeum VALUES(3,3,3);
 
 INSERT INTO pozycja VALUES(1,'Bramkarz');
 INSERT INTO pozycja VALUES(2,'Boczny Obronca');
@@ -71,7 +71,7 @@ INSERT INTO zdarzenie VALUES(2,'Asysta');
 INSERT INTO zdarzenie VALUES(3,'Zolta');
 INSERT INTO zdarzenie VALUES(4,'Czerwona');
 INSERT INTO zdarzenie VALUES(5,'StrzelonyKarny');
-INSERT INTO zdarzenie VALUES(5,'SpudlowanyKarny');
+INSERT INTO zdarzenie VALUES(6,'SpudlowanyKarny');
 
 INSERT INTO przebiegMeczu VALUES(1,1,1,3,50);
 INSERT INTO przebiegMeczu VALUES(2,1,2,1,51);
