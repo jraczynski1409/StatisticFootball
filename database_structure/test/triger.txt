@@ -1,0 +1,42 @@
+
+INSERT INTO statystykipilkarza values(2,0,0,0,0,0,2,1);
+DROP TRIGGER automatGoli;
+
+CREATE OR REPLACE TRIGGER automatGoli
+AFTER INSERT ON przebiegMeczu
+FOR EACH ROW
+
+DECLARE
+    kl numeric;
+    gosp numeric;
+    gosc numeric;
+    man numeric;
+    
+BEGIN
+        
+	    SELECT id_klub into kl from pilkarz where ID_pilkarz=:NEW.id_pilkarz;
+	    SELECT id_gospodarz into gosp from mecz where ID_mecz = :NEW.id_mecz;
+	    SELECT id_gosc into gosc from mecz where ID_mecz = :NEW.id_mecz;
+		UPDATE statystykiPilkarza set statystykiPilkarza.goal = (statystykiPilkarza.goal+1) where statystykiPilkarza.ID_pilarz= :NEW.ID_pilkarz;
+		
+	    IF kl = gosp THEN
+	        UPDATE mecz set gospGol=(gospGol+1) where id_mecz= :NEW.ID_mecz;
+	        DBMS_OUTPUT.PUT_LINE('gosp');
+	    ELSIF kl = gosc THEN
+	        UPDATE mecz set goscGol=(goscGol+1) where id_mecz = :NEW.ID_mecz;
+	        DBMS_OUTPUT.PUT_LINE('gosc');
+	    ELSE
+	        DBMS_OUTPUT.PUT_LINE('nie gra tu ani tu.');
+	    END IF;
+END;
+/
+
+insert into przebiegMeczu values(25,4,1,3,1,91); 
+insert into przebiegMeczu values(26,4,1,4,2,93);
+
+select * from statystykiPilkarza where id_pilarz=3; 
+select * from statystykiPilkarza where id_pilarz=2; 
+select * from mecz where id_mecz=4;
+
+delete from przebiegMeczu where ID_przebiegMeczu=25; 
+delete from przebiegMeczu where ID_przebiegMeczu=26; 
