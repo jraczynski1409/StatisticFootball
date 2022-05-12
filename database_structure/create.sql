@@ -137,9 +137,9 @@ CREATE TABLE mecz(
     ID_mecz NUMERIC PRIMARY KEY,
     ID_gospodarz numeric references klub(ID_klub) NOT NULL,
     ID_gosc numeric references klub(ID_klub) NOT NULL,
-	gospGol numeric;
-	goscGol numeric;
-	rezultat numeric;
+	gospGol numeric,
+	goscGol numeric,
+	rezultat numeric,
     ID_sedzia numeric references sedzia(ID_sedzia) NOT NULL,
     ID_sezon numeric references sezon(ID_sezon) NOT NULL,
     termin date NOT NULL
@@ -154,6 +154,7 @@ CREATE TABLE przebiegMeczu(
     ID_przebiegMeczu NUMERIC PRIMARY KEY,
     ID_mecz NUMERIC REFERENCES mecz(ID_mecz),
     ID_zdarzenie numeric references zdarzenie(ID_zdarzenie),
-    ID_pilkarza numeric references pilkarz(ID_pilkarz),
+    ID_pilkarz numeric references pilkarz(ID_pilkarz),
+	ID_klub numeric references klub(ID_klub),
     minuta numeric check (minuta>0 and minuta <130)
 );
