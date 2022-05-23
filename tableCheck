@@ -2,10 +2,10 @@ narodowosc - do zrobienia ręcznie - wszystkie kraje                       OK
 miasto     - do zrobienia ręcznie - wszystkier miasta w polsce            OK
 osoba      - generator            - 10000                                 OK separator KROPKA "." !!!!!!
 sedzia     - generator            - 1000      id_osoby od 9001-10000      OK 
-stadion    - do zrobienia recznie - 100
-liga       - 50/50                - 100
-klub       - 50/50                - 1000
-sezon      - generator            - 1000
+stadion    - do zrobienia recznie - 100                                   OK
+liga       - 50/50                - 100                                   OK              
+klub       - 50/50                - 1000                                  DO ZROBIENIA KUBA
+sezon      - generator            - 1000                                  OK
 pozycja    - recznie              - 50
 pilkarz    - generator            - 10000
 manager    - generator            - 1000
