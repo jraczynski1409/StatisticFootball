@@ -39,8 +39,7 @@ CREATE TABLE klub(
     ID_klub NUMERIC PRIMARY KEY,
     nazwa varchar2(64) NOT NULL UNIQUE,
     budzet NUMERIC,
-    wartosc NUMERIC CHECK (wartosc>0),
-    Wlasciciel VARCHAR2(64) NOT NULL,
+    Wlasciciel NUMERIC REFERENCES osoba(ID_osoba) NOT NULL,
     stadion NUMERIC REFERENCES stadion(ID_stadion) NOT NULL,
     miasto NUMERIC REFERENCES miasto(ID_miasto) NOT NULL,
     narodowosc NUMERIC REFERENCES narodowosc(ID_narodowosc) NOT NULL
