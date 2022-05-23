@@ -4,7 +4,7 @@ osoba      - generator            - 10000                                 OK sep
 sedzia     - generator            - 1000      id_osoby od 9001-10000      OK 
 stadion    - do zrobienia recznie - 100                                   OK
 liga       - 50/50                - 100                                   OK              
-klub       - 50/50                - 1000                                  DO ZROBIENIA KUBA
+klub       - 50/50                - 1000                                  OK
 sezon      - generator            - 1000                                  OK
 pozycja    - recznie              - 50
 pilkarz    - generator            - 10000
