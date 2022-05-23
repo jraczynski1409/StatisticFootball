@@ -32,8 +32,7 @@ CREATE TABLE stadion(
 CREATE TABLE liga(
     ID_liga NUMERIC PRIMARY KEY,
     nazwa varchar2(32) NOT NULL UNIQUE,
-    kraj NUMERIC REFERENCES narodowosc(ID_narodowosc) NOT NULL,
-    sponsor varchar2(64) NOT NULL
+    kraj NUMERIC REFERENCES narodowosc(ID_narodowosc) NOT NULL
 );
 
 CREATE TABLE klub(
