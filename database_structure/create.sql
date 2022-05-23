@@ -33,9 +33,7 @@ CREATE TABLE liga(
     ID_liga NUMERIC PRIMARY KEY,
     nazwa varchar2(32) NOT NULL UNIQUE,
     kraj NUMERIC REFERENCES narodowosc(ID_narodowosc) NOT NULL,
-    sponsor varchar2(64) NOT NULL,
-    poziom NUMERIC NOT NULL,
-    max_liczba_druzyn NUMERIC NOT NULL
+    sponsor varchar2(64) NOT NULL
 );
 
 CREATE TABLE klub(
@@ -44,7 +42,6 @@ CREATE TABLE klub(
     budzet NUMERIC,
     wartosc NUMERIC CHECK (wartosc>0),
     Wlasciciel VARCHAR2(64) NOT NULL,
-    liga NUMERIC REFERENCES liga(ID_liga) NOT NULL,
     stadion NUMERIC REFERENCES stadion(ID_stadion) NOT NULL,
     miasto NUMERIC REFERENCES miasto(ID_miasto) NOT NULL,
     narodowosc NUMERIC REFERENCES narodowosc(ID_narodowosc) NOT NULL
