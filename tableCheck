@@ -1,3 +1,18 @@
-narodowosc - do zrobienia ręcznie
-miasto     - do zrobienia ręcznie
-
+narodowosc - do zrobienia ręcznie - 100
+miasto     - do zrobienia ręcznie - 100
+osoba      - generator            - 10000
+sedzia     - generator            - 100
+stadion    - do zrobienia recznie - 100
+liga       - 50/50                - 100
+klub       - 50/50                - 1000
+sezon      - generator            - 1000
+pozycja    - recznie              - 50
+pilkarz    - generator            - 10000
+manager    - generator            - 1000
+statystykip - generator           - 10000
+statystykik - generator           - 1000
+statystykim - generator           - 1000
+statystykis - generator           - 100
+mecz        - generator           - 10000
+zdarzenie   - recznie             - 10
+przebieg meczu - 
