@@ -41,7 +41,8 @@ CREATE TABLE klub(
     budzet NUMERIC,
     Wlasciciel NUMERIC REFERENCES osoba(ID_osoba) NOT NULL,
     stadion NUMERIC REFERENCES stadion(ID_stadion) NOT NULL,
-    miasto NUMERIC REFERENCES miasto(ID_miasto) NOT NULL
+    miasto NUMERIC REFERENCES miasto(ID_miasto) NOT NULL,
+    liga NUMERIC REFERENCES liga(ID_liga) NOT NULL
 );
 
 CREATE TABLE sezon(
