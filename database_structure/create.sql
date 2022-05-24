@@ -88,8 +88,7 @@ CREATE TABLE statystykiSedziego(
     red NUMERIC,
     yellow NUMERIC,
     penelty NUMERIC,
-    ID_sedzia NUMERIC REFERENCES sedzia(ID_sedzia) NOT NULL,
-    ID_sezon NUMERIC REFERENCES sezon(ID_sezon) NOT NULL
+    ID_sedzia NUMERIC REFERENCES sedzia(ID_sedzia) NOT NULL
 );
 
 CREATE TABLE statystykiPilkarza(
@@ -99,8 +98,7 @@ CREATE TABLE statystykiPilkarza(
     matches numeric,
     yellow numeric,
     red numeric,
-    ID_pilkarz NUMERIC REFERENCES pilkarz(ID_pilkarz) NOT NULL,
-    ID_sezon NUMERIC REFERENCES sezon(ID_sezon) NOT NULL
+    ID_pilkarz NUMERIC REFERENCES pilkarz(ID_pilkarz) NOT NULL
 );
 
 
@@ -111,8 +109,7 @@ CREATE TABLE statystykiManagera(
     lost numeric,
     goalsScored numeric,
     goalsConceded numeric,
-    ID_maganer NUMERIC REFERENCES manager(ID_manager) NOT NULL,
-    ID_sezon NUMERIC REFERENCES sezon(ID_sezon) NOT NULL
+    ID_maganer NUMERIC REFERENCES manager(ID_manager) NOT NULL
 );
 
 CREATE TABLE statystykiKlubu(
@@ -123,8 +120,7 @@ CREATE TABLE statystykiKlubu(
     goalsScored numeric,
     goalsConceded numeric,
     points numeric,
-    ID_klub numeric references klub(ID_klub) NOT NULL,
-    ID_sezon numeric references sezon(ID_sezon) NOT NULL
+    ID_klub numeric references klub(ID_klub) NOT NULL
 );
 
 CREATE TABLE mecz(
