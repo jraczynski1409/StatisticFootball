@@ -131,8 +131,7 @@ CREATE TABLE mecz(
 	goscGol numeric,
 	rezultat numeric,
     ID_sedzia numeric references sedzia(ID_sedzia) NOT NULL,
-    ID_sezon numeric references sezon(ID_sezon) NOT NULL,
-    termin date NOT NULL
+    ID_sezon numeric references sezon(ID_sezon) NOT NULL
 );
 
 CREATE TABLE zdarzenie(
