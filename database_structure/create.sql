@@ -79,7 +79,6 @@ CREATE TABLE pilkarz(
 
 CREATE TABLE manager(
     ID_manager NUMERIC PRIMARY KEY,
-    licencja varchar2(64) NOT NULL,
     ID_klub NUMERIC REFERENCES klub(ID_klub) NOT NULL,
     ID_osoba NUMERIC REFERENCES osoba(ID_osoba) NOT NULL
 );
