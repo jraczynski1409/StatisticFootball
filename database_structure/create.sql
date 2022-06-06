@@ -18,26 +18,25 @@ CREATE TABLE osoba(
 
 CREATE TABLE sedzia(
     ID_sedzia NUMERIC PRIMARY KEY,
-    licencja varchar2(32) NOT NULL,
+    licencja varchar2(64) NOT NULL,
     ID_osoba NUMERIC REFERENCES osoba(ID_osoba) NOT NULL
 );
 
 CREATE TABLE stadion(
     ID_stadion NUMERIC PRIMARY KEY,
-    nazwa varchar2(64) NOT NULL UNIQUE,
+    nazwa varchar2(200) NOT NULL UNIQUE,
     sponsor varchar2(64) NOT NULL,
     pojemnosc NUMERIC CHECK (pojemnosc>=0)
 );
 
 CREATE TABLE liga(
     ID_liga NUMERIC PRIMARY KEY,
-    nazwa varchar2(32) NOT NULL UNIQUE,
-    kraj NUMERIC REFERENCES narodowosc(ID_narodowosc) NOT NULL
+    nazwa varchar2(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE klub(
     ID_klub NUMERIC PRIMARY KEY,
-    nazwa varchar2(64) NOT NULL UNIQUE,
+    nazwa varchar2(128) NOT NULL UNIQUE,
     budzet NUMERIC,
     Wlasciciel NUMERIC REFERENCES osoba(ID_osoba) NOT NULL,
     stadion NUMERIC REFERENCES stadion(ID_stadion) NOT NULL,
